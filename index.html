@@ -1,0 +1,58 @@
+<!DOCTYPE ht!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HAPPY BIRTHDAY MOR</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="login-page">
+		<div class="form">
+			<form class="login-form">
+				<h1>Iniciar sesión</h1>
+				<input type="text" placeholder="Tu Nombre Completo Aqui mor" id="username" title="Ingresa tu nombre completo aquí">
+				<input type="password" placeholder="Contraseña Secreta" id="password"/>
+				<button type="button" onclick="togglePasswordVisibility()" title="Nustra fecha de primer aniversario">Mostrar contraseña</button>
+				<button type="submit" onclick="validateLogin(event)">Ingresar</button>
+				<p id="error-message" style="display:none;color:red;"> Amor,Nombre completo o contraseña incorrecta, vamos vos podes.</p>
+			</form>
+		</div>
+	</div>
+
+	<div class="pist-password">
+		<div class="form">
+		  <h1 style="position: absolute; z-index: 1;">Pista Contraseña:</h1>
+		  <h6 style="position: relative; z-index: 0;">Al sentirte cerca, algo cambia en mi. Con tus suaves manos sostienes todo lo que hay dentro de mi.</h6>
+		</div> 
+	   </div>
+	   
+
+	<script>
+		function togglePasswordVisibility() {
+			var passwordField = document.getElementById("password");
+			if (passwordField.type === "password") {
+				passwordField.type = "text";
+			} else {
+				passwordField.type = "password";
+			}
+		}
+
+		function validateLogin(event) {
+			event.preventDefault(); // detener la acción predeterminada del botón de envío
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			if (username !== "candela mia caceres sanchez" || password !== "almas y pieles") {
+				document.getElementById("error-message").style.display = "block";
+				setTimeout(function() {
+					document.getElementById("error-message").style.display = "none";
+				}, 3000); // tiempo de espera en milisegundos (3 segundos)
+			} else {
+				window.location.href = "bienvenida.html";
+			}
+		}
+	</script>
+</body>
+</html>
+
+
+    

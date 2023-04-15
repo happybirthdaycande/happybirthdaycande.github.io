@@ -1,0 +1,138 @@
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #1b1b23cb;
+	padding: 0rem;
+	height: 60px;
+  }
+
+body {
+	background-color: #0605057b;
+	background-attachment: fixed;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+#hero {
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	mix-blend-mode: overlay;
+	object-fit: cover;
+}
+
+.capa {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background:#958787b0;
+opacity: 0.50;
+mix-blend-mode: overlay;
+}
+
+h1 {
+	padding: 0.5cm;
+	font-size: 1em; /* cambia el tamaño del texto */
+	font-family: 'Arial', sans-serif; /* cambia la fuente del texto */
+	color: #e8e5e5c8;
+	display: inline-block;
+	margin-top: auto ;
+	border: 1px solid black;
+	background-color: rgba(188, 125, 209, 0.247); /* agrega un fondo resaltado */
+  }
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 2em 0;
+}
+
+li {
+	margin: 0.5em 0;
+}
+
+a {
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+    background-color: #e0a2e89d;
+    border-radius: 30px;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgba(29, 31, 173, 0.25);
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin: 1.5em;
+	width: 16%;
+  }
+
+a:hover {
+	background-color: #6f0768;
+	color: #FFFFFF;
+}
+
+.container {
+	position: relative;
+	
+  }
+  
+  .mi-boton {
+	z-index: 3;
+	background-color: #4019ad8d;
+	color: white;
+	padding: 12px 24px;
+	font-size: 15px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+  }
+  
+  .mi-boton:hover {
+	background-color: #6f0768;
+  }
+  
+  .mi-boton:active {
+	background-color: #2f5b2d;
+  }
+
+  #imagen {
+	position: absolute; /* Permite posicionar la imagen de manera absoluta en la página */
+	top: 30%; /* La imagen estará en el 50% de la altura de la página */
+	left: 30%; /* La imagen estará en el 50% del ancho de la página */
+	transform: translate(-50%, -50%); /* Con esta propiedad, se mueve la imagen hacia arriba y la izquierda, para que quede centrada */
+	z-index: 10; /* Permite que la imagen aparezca encima del video */
+}
+ 
+.boton-volver{
+	position: relative;
+	z-index: 3;
+
+}
+  
+
+  
+  

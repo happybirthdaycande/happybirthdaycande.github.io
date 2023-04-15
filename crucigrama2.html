@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles7.css">
+
+	<title>CruciAmor</title>
+	<style>
+		
+		td {
+			border: 3px solid rgb(30, 5, 132);
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			font-size: 29px;
+            color: blue;
+           
+		}
+		.correct {
+			background-color: green;
+			color: white;
+		}
+		.incorrect {
+			background-color: red;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<a href="bienvenida.html" class="back-button">< Volver al menú</a>
+	<h1>CruciAmor</h1>
+	<table>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+		 </tr>
+         <tr>
+			<td>4</td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+		</tr>
+        <tr>
+			<td>5</td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+		</tr>
+        <tr>
+			<td>6</td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+		</tr>
+        <tr>
+			<td>7</td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+			<td><input type="text" maxlength="1"></td>
+		</tr>
+        
+	</table>
+	<br>
+	<button onclick="checkAnswers()">Comprobar</button>
+	<button onclick="reset()">Reiniciar</button>
+
+    <div>
+        <h3>Pistas:</h3>
+        <p>1. Parte de una planta que lleva agua y nutrientes desde las raíces a las hojas. (horizontal, 1,2,3)</p>
+        <p>2. Que se refiere a la tierra. (vertical, 2,1)</p>
+        <p>3. Sinónimo de "aéreo". (horizontal, 4,5,6,7)</p>
+        <p>4. Que se refiere a las arterias. (vertical, 4,6,9)</p>
+        <p>5. Material que se refiere a los huesos y los dientes. (horizontal, 8,9)</p>
+    </div>
+
+	<script>
+		function checkAnswers() {
+	var answers = [
+		document.querySelector('tr:nth-child(2) td:nth-child(2) input').value.toUpperCase(),
+		document.querySelector('tr:nth-child(2) td:nth-child(3) input').value.toUpperCase(),
+		document.querySelector('tr:nth-child(2) td:nth-child(4) input').value.toUpperCase(),
+		document.querySelector('tr:nth-child(3) td:nth-child(2) input').value.toUpperCase(),
+		document.querySelector('tr:nth-child(3) td:nth-child(3) input').value.toUpperCase(),
+		document.querySelector('tr:nth-child(3) td:nth-child(4) input').value.toUpperCase(),
+		document.querySelector('tr:nth-child(4) td:nth-child(2) input').value.toUpperCase(),
+		document.querySelector('tr:nth-child(4) td:nth-child(3) input').value.toUpperCase(),
+		document.querySelector('tr:nth-child(4) td:nth-child(4) input').value.toUpperCase()
+        
+	];
+
+	var correctAnswers = ['A', 'R', 'T', 'E', 'R', 'I', 'A', 'L', 'E'];
+
+	var allCorrect = true;
+
+	for (var i = 0; i < answers.length; i++) {
+		if (answers[i] === '') {
+			alert('Por favor complete todas las casillas.');
+			return;
+		}
+
+		if (answers[i] === correctAnswers[i]) {
+			document.querySelectorAll('input')[i].classList.add('correct');
+		} else {
+			document.querySelectorAll('input')[i].classList.add('incorrect');
+			allCorrect = false;
+		}
+	}
+
+	if (allCorrect) {
+		alert('¡Muy bien! Has completado el crucigrama correctamente.');
+	}
+}
+
+function reset() {
+	var inputs = document.querySelectorAll('input');
+	for (var i = 0; i < inputs.length; i++) {
+		inputs[i].value = '';
+		inputs[i].classList.remove('correct');
+		inputs[i].classList.remove('incorrect');
+	}
+}

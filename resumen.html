@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Resumen de Aniversarios</title>
+	<link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+	<header>
+		<h1>Resumen de Aniversarios</h1>
+		<a href="bienvenida.html">Volver al menú</a>
+	</header>
+
+	<main>
+		<div class="search-container">
+			<input type="text" placeholder="Buscar por fecha (dd/mm/aa)" id="fecha">
+			<button type="button" onclick="buscarAniversario()">Buscar</button>
+		</div>
+
+		<div id="resultado-busqueda"></div>
+	</main>
+
+	<script src="scripts.js"></script>
+
+	<!-- Agrega el script de tu HTML anterior aquí -->
+	<script>
+		var imagenSeleccionada;
+
+		function guardarImagen() {
+			var input = document.getElementById("imagen");
+
+			if (input.files && input.files[0]) {
+				var lector = new FileReader();
+
+				lector.onload = function(e) {
+					imagenSeleccionada = e.target.result;
+					console.log("Imagen guardada en la variable imagenSeleccionada.");
+					document.getElementById("resultado").innerHTML = "<h2>Imagen guardada</h2>";
+					mostrarAniversario12();
+				}
+
+				lector.readAsDataURL(input.files[0]);
+			} else {
+				console.log("No se seleccionó ninguna imagen.");
+			}
+		}
+
+		function mostrarAniversario12() {
+			var fecha = "01/05/23";
+			var resultado = document.getElementById("resultado-busqueda");
+			resultado.innerHTML = "<h2>Aniversario 12</h2><img src='" + imagenSeleccionada + "'>";
+		}
+
+		function buscarAniversario() {
+    var fecha = document.getElementById("fecha").value;
+    var resultado = document.getElementById("resultado-busqueda");
+ 
+	resultado.innerHTML = ""; // Borrar cualquier resultado anterior
+
+    // Comprobar si ya se ha realizado una búsqueda anterior
+    if (resultado.innerHTML !== "") {
+        resultado.style.display = "none"; // ocultar el resultado anterior
+     }
+   
+  
+    // Buscar la fecha en la lista de aniversarios
+	//aniverio 1
+    else if (fecha === "01/06/22") {
+        resultado.innerHTML = "<h2>nuestro primer mes juntos</h2><br><img src='img/mes 1.3.jpg' class='encuadre'><br><img src='img/mes 1.4.jpg' class='encuadre'><br><img src='img/mes 1.2.jpg' class='encuadre'><br><img src='img/mes1.jpg' class='encuadre'><br><h2>nuestro primer mes fue una cosa de locos, sentimos un monton de cosas... nos conocimos un montonaso, y de mi parte me enamoraba dia a dia, Te amo mucho. Gracias por un lindo mes.</h2>";
+    } 
+	//aniversario 2
+	else if (fecha === "01/07/22") {
+        resultado.innerHTML = "<h2>segundo mes juntitos</h2><br><video width='720' height='480' controls ><source src='videos/Video de WhatsApp 2023-04-07 a las 05.01.16.mp4' type='video/mp4'></video><br><video width='720' height='480' controls><source src='videos/ani22.mp4' type='video/mp4'></video><br> <img width='500' height='650'src='img/ani 2.jpg' class='encuadre' id='ani2-imagen' >";
+    } 
+	//aniversario 3
+	else if (fecha === "01/08/22") {
+        resultado.innerHTML = "<h2> 3er aniversariussss</h2><br><img src='img/ani 3.2.jpg' class='encuadre'><br><img src='img/ani 3.jpg' class='encuadre'><br><img src='img/ani3.aa.jpg' class='encuadre'><br><h2>Mueno si bien este no fue un aniversario que hallamos capturado mucho contenido audiovisual jsjs, eso quiere decir que estuvimos muy ocupados pasandola bien.Que lindoo aniversario</h2>";
+    } 
+	//aniversario 4
+		else if (fecha === "01/09/22") {
+  resultado.innerHTML =  "<h2>Aniversarius cuatrou</h2><br><img src='img/mes 4 cap.jpg' class='encuadre'><br><video width='720' height='480' controls ><source src='videos/mes 4 video.mp4' type='video/mp4'></video><br><img src='img/mes 4.jpg' class='encuadre'><br><img src='img/mes 4 capp.jpg' class='encuadre'><br><audio controls ><source src='audioss/audio mes 4.mp3' type='audio/mpeg'></audio><br> <h2>re feliz de poder haber estado 4 meses juntos mi vida</h2>";
+    } 
+	//aniversario 5
+	else if (fecha === "01/10/22") {
+        resultado.innerHTML = "<h2>Aniversariusss cincou </h2><br><img src='img/ani 5.jpg' class='encuadre'><br><video width='720' height='480' controls ><source src='videos/video mes 5.mp4' type='video/mp4'></video><br><h2>video dedicado por mi hacia ti ese dia</h2><br><video width='720' height='480' controls ><source src='videos/ani 5.mp4' type='video/mp4'></video><br><audio controls ><source src='audioss/audio mes 5.mp3' type='audio/mpeg'></audio><br><h2>que lindo resumen de aniversario, beibi beibi ohhh</h2>";
+    } 
+	//aniversario 6
+	else if (fecha === "01/11/22") {
+        resultado.innerHTML = "<h2>Aniversarius seisss</h2><br><img src='img/historia ani 6.jpg' class='encuadre'><br><img src='img/cap ani 6.jpg' class='encuadre'><br><audio controls ><source src='audioss/audio 6.mp3' type='audio/mpeg'></audio><br><audio controls ><source src='audioss/audio 6s.mp3' type='audio/mpeg'></audio><br><img src='img/novia ani 6.jpg' class='encuadre'><br><audio controls ><source src='audioss/audio 6ss.mp3' type='audio/mpeg'></audio>";
+    } 
+	//aniversario 7
+	else if (fecha === "01/12/22") {
+        resultado.innerHTML = "<h2>Amosh sobre el aniversario 7 no nos sacamos fotos, ni nos mandamos mensj relacionados, seguro estabamos muy ocupados siendo felices juntos. Tonces decidi hacer un resumen de todo diciembre juntos jsjji</h2><br><img src='img/ani 7 ig 1.jpg' class='encuadre'><br><img src='img/ani7 ig 2.jpg' class='encuadre'><br><img src='img/ani 7 ig 3.jpg' class='encuadre'><br><img src='img/ani 7 ig 4.jpg' class='encuadre'><br><img src='img/ani 7 ig 5.jpg' class='encuadre'><br><img src='img/ani 7 ig 6.jpg' class='encuadre'><br><img src='img/ani 7 ig 7.jpg' class='encuadre'><br><img src='img/ani 7 ig 8.jpg' class='encuadre'><br><video width='720' height='480' controls ><source src='videos/ani 7 vid 1.mp4' type='video/mp4'></video>";
+    } 
+	//aniversario 8
+	else if (fecha === "01/01/23") {
+        resultado.innerHTML = "<h2>mecesesito nro 8 juntoossss</h2><br><img src='img/ani 8 ig 1.jpg' class='encuadre'><br><img src='img/ani 8 ig 2.jpg' class='encuadre'><br><video width='720' height='480' controls ><source src='videos/ani 8 vid 1.mp4' type='video/mp4'></video><br><img src='img/ani 8 ig 3.jpg' class='encuadre'><br><video width='720' height='480' controls ><source src='videos/ani 8 vid 2.mp4' type='video/mp4'></video><br><video width='720' height='480' controls ><source src='videos/ani 8 vid 3.mp4' type='video/mp4'></video><br><video width='720' height='480' controls ><source src='videos/ani 8 vid 4.mp4' type='video/mp4'></video><br><h2>un audio mio en pedo tratando de unir palabras para ti, de esa nochejsjjs</h2><br><audio controls ><source src='audioss/ani 8 aud 1.mp3' type='audio/mpeg'></audio>";
+    } 
+	//aniversario 9
+	else if (fecha === "01/02/23") {
+        resultado.innerHTML = "<h2>Aniversariosh 9, en este tampoco hay muchas cosas del dia, asique procedo a hacer resunmencito de febreroo</h2><br><img src='img/ani 9 ig 1.jpg' class='encuadre'><br><img src='img/ani 9 ig 2.jpg' class='encuadre'><br><video width='720' height='480' controls ><source src='videos/ani 9 vid 1.mp4' type='video/mp4'></video><br><img src='img/ani 9 ig 3.jpg' class='encuadre'><br><video width='720' height='480' controls ><source src='videos/ani 9 vid 2.mp4' type='video/mp4'></video><br><video width='720' height='480' controls ><source src='videos/ani 9 vid 3.mp4' type='video/mp4'></video><br><img src='img/ani 9 ig 4.jpg' class='encuadre'>";
+    } 
+	//aniversario 10
+	else if (fecha === "01/03/23") {
+        resultado.innerHTML = "<h2>nuestro mes 10 lo pasamos separaditos :( </h2><br><img src='img/ani 10 ig 1.jpg' class='encuadre'><br><h2> habia poquitas imagenes asique puse un par mas de otros dias jsjs</h2><br><img src='img/ani 10 ig 2.jpg' class='encuadre'><br><img src='img/ani 10 ig 3.jpg' class='encuadre'><br><video width='720' height='480' controls ><source src='videos/ani 10 vid 1.mp4' type='video/mp4'></video>";
+    }
+	//aniversario 11
+	 else if (fecha === "01/04/23") {
+        resultado.innerHTML = "<h2>Aniversariush 11 :) </h2><br><img src='img/ani 11 ig 01.jpg' class='encuadre'><br><img src='img/ani 11 ig 02.jpg' class='encuadre'><br><img src='img/ani 11 ig 1.jpg' class='encuadre'><br><img src='img/ani 11 ig 2.jpg' class='encuadre'><br><img src='img/ani 11 ig 3.jpg' class='encuadre'>";
+	} 
+		//aniversario 12
+		else if (fecha === "01/05/23") {
+        resultado.innerHTML = "<h2>lindas cosas estan por venir mor</h2>";
+    }  
+		//aniversario 13
+		else if (fecha === "01/06/23") {
+        resultado.innerHTML = "<h2>lindas cosas estan por venir mor</h2>";
+    } 
+		//aniversario 14
+		else if (fecha === "01/07/23") {
+        resultado.innerHTML = "<h2>lindas cosas estan por venir mor</h2>";
+    } 
+		//aniversario 15
+		else if (fecha === "01/08/23") {
+        resultado.innerHTML = "<h2>lindas cosas estan por venir mor</h2>";
+    } 
+		//aniversario 16
+		else if (fecha === "01/09/23") {
+        resultado.innerHTML = "<h2>lindas cosas estan por venir mor</h2>";
+    }
+		//aniversario 17
+		else if (fecha === "01/10/23") {
+        resultado.innerHTML = "<h2>lindas cosas estan por venir mor</h2>";
+    } 
+		//aniversario 18
+		else if (fecha === "01/11/23") {
+        resultado.innerHTML = "<h2>lindas cosas estan por venir mor</h2>";
+    } 
+		//aniversario 19
+		else if (fecha === "01/12/23") {
+        resultado.innerHTML = "<h2>lindas cosas estan por venir mor</h2>";
+    } else {
+        resultado.innerHTML = "<p>No se encontró ningún aniversario para la fecha ingresada</p>";
+    }
+
+    resultado.style.display = "block"; // mostrar el resultado
+	  
+		}
+	</script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,125 @@
+/* Estilos generales */
+body {
+  background-image: url(img/res.png) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; 
+  font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Estilos para el juego */
+  .game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .question-container {
+    margin: 0 20px 40px;
+  }
+  
+  .question-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+    background-color: rgba(200, 100, 239, 0.297);
+    display: inline-block;
+  }
+  
+  .answer-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    font-size: 16px;
+    border: 2px solid #ff4d4d;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #e60000;
+  }
+  
+  .feedback-text {
+    margin-top: 10px;
+    font-size: 25px;
+    color: #333;
+    
+  }
+  
+  .reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #666;
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  footer a {
+    color: #ff4d4d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #e60000;
+  }
+  .back-button {
+    background-color: #ff6384;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #ff4d6d;
+  }  

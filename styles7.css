@@ -1,0 +1,25 @@
+
+body {
+    background-image: url(img/imagen\ fondo\ de\ juegos\ 2.jpg), url(img/fondo\ de\ juegos.jpg), url(img/imagen\ de\ fondo\ de\ juegos\ 3.jpg);
+    background-repeat: no-repeat;
+    background-position: left top, center top, right top;
+    background-attachment: fixed;
+    background-size: 33.333%, 33.3333%, 33.334%;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    }
+    
+   
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #d90a87;
+    }
+   
+    table {
+        border-collapse: collapse;
+        border: 5px solid rgb(11, 14, 112);
+        width: 25%;
+     }
+     

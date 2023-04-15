@@ -1,0 +1,76 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+}
+
+form label {
+	margin-right: 10px;
+}
+
+form input[type="text"] {
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	flex-grow: 1;
+}
+
+form button {
+	padding: 5px;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: #3e8e41;
+}
+
+#aniversario-container {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+}
+
+.aniversario {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.aniversario h2 {
+	margin-top: 0;
+}
+
+.aniversario img {
+	max-width: 100%;
+	height: auto;
+}
+
+.aniversario a {
+	display: block;
+	margin-top: 10px;
+	padding: 5px;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.aniversario a:hover {
+	background-color: #3e8e41;
+}

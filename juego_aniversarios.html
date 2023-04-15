@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Juego de Aniversarios</title>
+	<link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+	<div class="container">
+        <a href="bienvenida.html" class="back-button">< Volver al menú</a>
+		<h1>Juego de Aniversarios</h1>
+		<p>Selecciona la fecha correcta para cada aniversario</p>
+		<div class="game-container">
+			<div class="question-container">
+				<p class="question-text">¿quien se baña menos?</p><br>
+				<input type="text" class="answer-input" id="answer-input-1">
+				<button class="submit-button" onclick="checkAnswer(1)">Comprobar respuesta</button>
+				<p class="feedback-text" id="feedback-text-1"></p>
+			</div>
+			<div class="question-container">
+				<p class="question-text">¿En qué fecha nos conocimos?</p> <br>
+				<input type="text" class="answer-input" id="answer-input-2">
+				<button class="submit-button" onclick="checkAnswer(2)">Comprobar respuesta</button>
+				<p class="feedback-text" id="feedback-text-2"></p>
+			</div>
+			<div class="question-container">
+				<p class="question-text">si la cantidad de pulseras que te gustaria que te regalase es igual a la suma de los 2 puntos que forman el centro de esta ecuacion canonica (x-3)^2 + (y-2)^2= 5^2, menos el numero 5,¿ cuantas pulseritas te debo? </p> <br>
+				<input type="text" class="answer-input" id="answer-input-3">
+				<button class="submit-button" onclick="checkAnswer(3)">Comprobar respuesta</button>
+				<p class="feedback-text" id="feedback-text-3"></p>
+			</div>
+			<div class="question-container">
+				<p class="question-text">¿cual es mi color fav?</p> <br>
+				<input type="text" class="answer-input" id="answer-input-3">
+				<button class="submit-button" onclick="checkAnswer(4)">Comprobar respuesta</button>
+				<p class="feedback-text" id="feedback-text-3"></p>
+			</div>
+			<div class="question-container">
+				<p class="question-text">¿de que se trataba el recor de dias consecutivo que soliamos tratar de mantener?</p> <br>
+				<input type="text" class="answer-input" id="answer-input-4">
+				<button class="submit-button" onclick="checkAnswer(5)">Comprobar respuesta</button>
+				<p class="feedback-text" id="feedback-text-4"></p>
+			</div>
+		</div>
+		<button class="reset-button" onclick="resetGame()">Volver a jugar</button>
+	</div>
+	<script src="script2.js"></script>
+</body>
+</html>
